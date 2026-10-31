@@ -1,3 +1,9 @@
+# Design update to Option 1A1 "Refined, pink and neon green", 31 Oct 2026
+
+- New palette: pink #FBE1EA header, hero, contact and mobile menu; neon green #8CF0B0 highlighter band behind italics, 2px link underlines, green "Request the deck" button, green bar on the hero photo. Wine accent removed.
+- Sub-page components restyled to match (green source underlines, highlighted next-page link).
+- Kept from v1.0: written sub-pages and the corrected 5x stat (the 1A1 handoff still shows 8x).
+
 # Theana website build, 31 Oct 2026
 
 Built from theana_website_handoff (Option 1A "Refined"). Deploy the `site/` folder as-is to Cloudflare Pages.
