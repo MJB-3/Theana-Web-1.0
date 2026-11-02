@@ -1,3 +1,10 @@
+# Design v2 with image spaces (handoff 1A1_2e), 2 Nov 2026
+
+- Homepage now has 7 image spaces (IMG-01 to IMG-07). Live: IMG-01 hero, IMG-02 Why matcha (in site/images/).
+- IMG-03 to IMG-07 show as grey frames. Their <img> tags are commented out in index.html ("pending photo"). To add one: drop the file into site/images/ with the exact name and uncomment its tag.
+- Kept: written sub-pages, corrected 5x stat (handoff still shows 8x), sub-page styles.
+- Supplied IMG-01 and IMG-02 were upscaled from 1200px sources; swap for full-resolution originals when available.
+
 # Design update to Option 1A1 "Refined, pink and neon green", 31 Oct 2026
 
 - New palette: pink #FBE1EA header, hero, contact and mobile menu; neon green #8CF0B0 highlighter band behind italics, 2px link underlines, green "Request the deck" button, green bar on the hero photo. Wine accent removed.
