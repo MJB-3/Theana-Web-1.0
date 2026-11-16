@@ -215,3 +215,5 @@ form.enquiry button{align-self:flex-start;cursor:pointer;font-family:var(--sans)
 .form-status[data-state]{display:block}
 .form-status[data-state=ok]{background:var(--pink)}
 .form-status[data-state=error]{background:var(--frame)}
+.tally-wrap{border-top:1px solid var(--ink);padding-top:16px;min-height:600px}
+.tally-wrap iframe{display:block;border:0;width:100%}

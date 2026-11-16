@@ -38,77 +38,14 @@
   <section class="page-intro">
     <div class="label">Enquire</div>
     <h1>Samples, volume or <em>the deck.</em></h1>
-    <p class="lede">Tell us who you are and what you need. The button opens your email app with everything filled in, ready to send.</p>
+    <p class="lede">Tell us who you are and what you need. It takes about a minute.</p>
   </section>
 
   <section class="form-wrap">
-    <form class="enquiry" action="mailto:hello@theanabio.com" method="post" enctype="text/plain" novalidate>
-      <div class="field">
-        <label for="f-type">I'd like to</label>
-        <select id="f-type" name="type" required>
-          <option value="samples">Request samples</option>
-          <option value="reserve">Reserve 2027 volume</option>
-          <option value="white-label">Discuss white label</option>
-          <option value="deck">Receive the investor deck</option>
-          <option value="other">Something else</option>
-        </select>
-      </div>
-
-      <div class="field-row">
-        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120"></div>
-        <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200"></div>
-      </div>
-
-      <div class="field-row">
-        <div class="field"><label for="f-company">Company</label><input id="f-company" name="company" type="text" autocomplete="organization" maxlength="160"></div>
-        <div class="field"><label for="f-country">Country</label><input id="f-country" name="country" type="text" autocomplete="country-name" maxlength="80"></div>
-      </div>
-
-      <div class="field-row">
-        <div class="field">
-          <label for="f-business">Business type</label>
-          <select id="f-business" name="business">
-            <option value="">Choose one</option>
-            <option>Café or coffee shop</option>
-            <option>Hotel or restaurant</option>
-            <option>Wholesaler or distributor</option>
-            <option>Chain or brand</option>
-            <option>Food, drink or supplement maker</option>
-            <option>Investor</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="f-volume">Estimated volume per month</label>
-          <select id="f-volume" name="volume">
-            <option value="">Not sure yet</option>
-            <option>Under 1 kg</option>
-            <option>1 to 5 kg</option>
-            <option>5 to 20 kg</option>
-            <option>20 to 100 kg</option>
-            <option>Over 100 kg</option>
-          </select>
-        </div>
-      </div>
-
-      <fieldset class="field">
-        <legend>Products of interest</legend>
-        <div class="checks">
-          <label><input type="checkbox" name="products" value="ceremonial"> Ceremonial matcha</label>
-          <label><input type="checkbox" name="products" value="culinary"> Culinary matcha</label>
-          <label><input type="checkbox" name="products" value="white-label"> White label</label>
-          <label><input type="checkbox" name="products" value="hojicha-oolong"> Hojicha or oolong</label>
-          <label><input type="checkbox" name="products" value="extracts"> Extracts</label>
-        </div>
-      </fieldset>
-
-      <div class="field"><label for="f-message">Message</label><textarea id="f-message" name="message" maxlength="4000"></textarea></div>
-
-      <div class="hp" aria-hidden="true"><label for="f-website">Leave this empty</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-
-      <div class="form-status" role="status" aria-live="polite"></div>
-      <button class="btn-outline btn-lg" type="submit">Write enquiry email</button>
-    </form>
+    <div class="tally-wrap">
+      <iframe id="tally-form" data-tally-base="https://tally.so/embed/LDKW4G" loading="lazy" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0" title="Enquire · Theana"></iframe>
+      <noscript><p>Our form needs JavaScript. <a class="link" href="https://tally.so/r/LDKW4G">Open the form</a> or email <a class="link" href="mailto:hello@theanabio.com">hello@theanabio.com</a>.</p></noscript>
+    </div>
 
     <aside class="form-aside">
       <h2>What happens next</h2>
