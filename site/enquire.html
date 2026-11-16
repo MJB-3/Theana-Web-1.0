@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Enquire · Theana</title>
+<meta name="description" content="Theana supplies matcha to cafés, hotels and brands in Europe, and is building an indoor tencha farm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Instrument+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="/products">Products</a>
+    <a href="/for-business">For business</a>
+    <a href="/our-farm">Our farm</a>
+    <a href="/investors">Investors</a>
+  </nav>
+  <a class="wordmark" href="/">Theana</a>
+  <div class="header-cta"><a class="btn-outline" href="/enquire?type=samples"><span class="long">Request samples</span><span class="short">Samples</span></a></div>
+</header>
+<nav id="mobile-menu" class="mobile-menu" data-open="false" aria-label="Mobile">
+  <a href="/products">Products</a>
+  <a href="/for-business">For business</a>
+  <a href="/our-farm">Our farm</a>
+  <a href="/investors">Investors</a>
+  <a href="/why-matcha">Why matcha</a>
+  <a href="/the-squeeze">The squeeze</a>
+  <a href="/enquire" aria-current="page">Enquire</a>
+</nav>
+
+<main>
+  <section class="page-intro">
+    <div class="label">Enquire</div>
+    <h1>Samples, volume or <em>the deck.</em></h1>
+    <p class="lede">Tell us who you are and what you need. We reply within two working days.</p>
+  </section>
+
+  <section class="form-wrap">
+    <form class="enquiry" action="/api/enquiry" method="post" novalidate>
+      <div class="field">
+        <label for="f-type">I'd like to</label>
+        <select id="f-type" name="type" required>
+          <option value="samples">Request samples</option>
+          <option value="reserve">Reserve 2027 volume</option>
+          <option value="white-label">Discuss white label</option>
+          <option value="deck">Receive the investor deck</option>
+          <option value="other">Something else</option>
+        </select>
+      </div>
+
+      <div class="field-row">
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120"></div>
+        <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200"></div>
+      </div>
+
+      <div class="field-row">
+        <div class="field"><label for="f-company">Company</label><input id="f-company" name="company" type="text" autocomplete="organization" maxlength="160"></div>
+        <div class="field"><label for="f-country">Country</label><input id="f-country" name="country" type="text" autocomplete="country-name" maxlength="80"></div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="f-business">Business type</label>
+          <select id="f-business" name="business">
+            <option value="">Choose one</option>
+            <option>Café or coffee shop</option>
+            <option>Hotel or restaurant</option>
+            <option>Wholesaler or distributor</option>
+            <option>Chain or brand</option>
+            <option>Food, drink or supplement maker</option>
+            <option>Investor</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-volume">Estimated volume per month</label>
+          <select id="f-volume" name="volume">
+            <option value="">Not sure yet</option>
+            <option>Under 1 kg</option>
+            <option>1 to 5 kg</option>
+            <option>5 to 20 kg</option>
+            <option>20 to 100 kg</option>
+            <option>Over 100 kg</option>
+          </select>
+        </div>
+      </div>
+
+      <fieldset class="field">
+        <legend>Products of interest</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="products" value="ceremonial"> Ceremonial matcha</label>
+          <label><input type="checkbox" name="products" value="culinary"> Culinary matcha</label>
+          <label><input type="checkbox" name="products" value="white-label"> White label</label>
+          <label><input type="checkbox" name="products" value="hojicha-oolong"> Hojicha or oolong</label>
+          <label><input type="checkbox" name="products" value="extracts"> Extracts</label>
+        </div>
+      </fieldset>
+
+      <div class="field"><label for="f-message">Message</label><textarea id="f-message" name="message" maxlength="4000"></textarea></div>
+
+      <div class="hp" aria-hidden="true"><label for="f-website">Leave this empty</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+
+      <div class="form-status" role="status" aria-live="polite"></div>
+      <button class="btn-outline btn-lg" type="submit">Send enquiry</button>
+    </form>
+
+    <aside class="form-aside">
+      <h2>What happens next</h2>
+      <p>We read every enquiry ourselves. Sample requests get a short follow-up on grades and quantities. Reservations are non-binding until we agree a contract.</p>
+      <p>Prefer email? <a class="link" href="mailto:hello@theanabio.com">hello@theanabio.com</a></p>
+      <small>We use your details only to answer your enquiry and keep them no longer than needed. Theana, Prague.</small>
+    </aside>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <a class="wordmark" href="/">Theana</a>
+  <nav aria-label="Footer"><a href="/products">Products</a><a href="/for-business">For business</a><a href="/our-farm">Our farm</a><a href="/why-matcha">Why matcha</a><a href="/the-squeeze">The squeeze</a><a href="/investors">Investors</a><a href="/enquire" aria-current="page">Enquire</a></nav>
+  <span>Preview · Confidential</span>
+</footer>
+
+<script src="/menu.js" defer></script>
+<script src="/enquire.js" defer></script>
+</body>
+</html>

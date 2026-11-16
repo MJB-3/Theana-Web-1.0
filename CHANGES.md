@@ -1,3 +1,20 @@
+# v3 · Buyer structure, 16 Nov 2026
+
+Restructured from an investor pitch site into the shape of the future customer site, still in stealth.
+
+- New pages: Products, For business, Our farm (replaces Our answer, with a 301 redirect), Investors, Enquire, Thanks.
+- Home now leads with buyers: what we supply, the squeeze for buyers, the farm, how buying works, then a strip for investors.
+- Products show real status: Planned 2027 / Origin: Taiwan for ceremonial and culinary matcha; white label from 2027; hojicha, oolong and extracts in development; Theana-grown tencha coming later. No prices, no customer quotes, no buy buttons.
+- Header CTA is now "Request samples". The deck request moved to the Investors page and the enquiry form.
+- Enquiry form posts to a Worker that emails hello@theanabio.com (honeypot, same-origin check, input limits).
+- Replaced the unsourced "$7.9bn by 2033" stat with "Under 10%: tencha's share of Japan's tea crop".
+- Nav, mobile menu, footer and contact block shared across all pages.
+
+## Open
+- Onboard theanabio.com for Email Sending (Cloudflare dashboard). Check it adds to, and does not replace, the Google Workspace SPF record.
+- Confirm the Taiwan wording once the import deal is signed (grades, formats, minimums).
+- Extracts: keep copy free of health claims (EU Reg. 1924/2006).
+
 # Design v2 with image spaces (handoff 1A1_2e), 2 Nov 2026
 
 - Homepage now has 7 image spaces (IMG-01 to IMG-07). Live: IMG-01 hero, IMG-02 Why matcha (in site/images/).

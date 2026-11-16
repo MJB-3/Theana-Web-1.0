@@ -1,0 +1,17 @@
+// Theana website: static pages in site/, plus a small Worker for the enquiry form.
+// The name must match the existing Cloudflare Worker.
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "theana-web-1-0",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./site",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  // Cloudflare Email Service. theanabio.com must be onboarded under Email Sending.
+  "send_email": [{ "name": "EMAIL" }],
+  "observability": { "enabled": true }
+}
