@@ -3,7 +3,8 @@
   if (!form) return;
   var el = function (n) { return form.elements[n]; };
   var status = form.querySelector('.form-status');
-  var button = form.querySelector('button[type=submit]');
+  var TO = 'hello@theanabio.com';
+  var TYPES = { samples: 'Sample request', reserve: '2027 volume reservation', 'white-label': 'White label', deck: 'Investor deck request', other: 'General enquiry' };
 
   // Pre-fill from links like /enquire?type=reserve&product=culinary
   var params = new URLSearchParams(location.search);
@@ -16,34 +17,24 @@
   }
   if (type === 'deck') el('business').value = 'Investor';
 
-  function show(state, msg) {
-    status.setAttribute('data-state', state);
-    status.textContent = msg;
-  }
+  function show(state, msg) { status.setAttribute('data-state', state); status.textContent = msg; }
+  function val(n) { return (el(n).value || '').trim(); }
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    if (!el('name').value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el('email').value.trim())) {
+    if (!val('name') || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val('email'))) {
       show('error', 'Please add your name and a valid email.');
       return;
     }
-    button.disabled = true;
-    button.textContent = 'Sending…';
-    fetch(form.getAttribute('action'), { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
-      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return { ok: r.ok, d: d }; }); })
-      .then(function (res) {
-        if (res.ok) {
-          form.reset();
-          show('ok', 'Thank you. Your enquiry is in, and we will reply within two working days.');
-          button.textContent = 'Sent';
-        } else {
-          throw new Error(res.d.error || 'failed');
-        }
-      })
-      .catch(function () {
-        show('error', 'Sorry, that did not go through. Please email hello@theanabio.com instead.');
-        button.disabled = false;
-        button.textContent = 'Send enquiry';
-      });
+    var products = Array.prototype.map.call(form.querySelectorAll('input[name=products]:checked'), function (b) { return b.parentNode.textContent.trim(); });
+    var label = TYPES[val('type')] || TYPES.other;
+    var lines = [
+      ['Type', label], ['Name', val('name')], ['Email', val('email')], ['Company', val('company')],
+      ['Country', val('country')], ['Business', val('business')], ['Volume / month', val('volume')], ['Products', products.join(', ')]
+    ].filter(function (r) { return r[1]; }).map(function (r) { return r[0] + ': ' + r[1]; });
+    var body = lines.join('\n') + (val('message') ? '\n\n' + val('message') : '') + '\n\n(Sent from theanabio.com/enquire)';
+    var subject = label + ': ' + (val('company') || val('name'));
+    window.location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    show('ok', 'Your email app should now open with your enquiry filled in. Press send. If nothing opened, email ' + TO + ' directly.');
   });
 })();

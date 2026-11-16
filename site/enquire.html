@@ -38,11 +38,11 @@
   <section class="page-intro">
     <div class="label">Enquire</div>
     <h1>Samples, volume or <em>the deck.</em></h1>
-    <p class="lede">Tell us who you are and what you need. We reply within two working days.</p>
+    <p class="lede">Tell us who you are and what you need. The button opens your email app with everything filled in, ready to send.</p>
   </section>
 
   <section class="form-wrap">
-    <form class="enquiry" action="/api/enquiry" method="post" novalidate>
+    <form class="enquiry" action="mailto:hello@theanabio.com" method="post" enctype="text/plain" novalidate>
       <div class="field">
         <label for="f-type">I'd like to</label>
         <select id="f-type" name="type" required>
@@ -107,7 +107,7 @@
       <div class="hp" aria-hidden="true"><label for="f-website">Leave this empty</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
 
       <div class="form-status" role="status" aria-live="polite"></div>
-      <button class="btn-outline btn-lg" type="submit">Send enquiry</button>
+      <button class="btn-outline btn-lg" type="submit">Write enquiry email</button>
     </form>
 
     <aside class="form-aside">
